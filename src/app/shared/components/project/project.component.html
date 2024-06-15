@@ -1,0 +1,40 @@
+<div
+  [id]="'project-'"
+  [class]="
+    'flex ' +
+    (reverse ? 'flex-row-reverse' : 'flex-row') +
+    ' mb-32 gap-10 translate-x-[-600px]'
+  "
+>
+  <img
+    class="h-[230px] w-[450px] rounded-md"
+    [src]="'../../../../assets/images/' + project?.image"
+    alt=""
+  />
+  <div class="flex flex-col">
+    <h1
+      class="mb-2 font-poppins text-4xl font-bold uppercase leading-tight text-white"
+    >
+      {{ project?.title }}
+    </h1>
+    <div class="mb-2 flex flex-row gap-2">
+      @for (usedTech of project?.usedTechnology; track $index) {
+        <span
+          class="bg-custom-blueBg1 flex flex-row items-center gap-2 rounded-full px-3 py-2 font-poppins text-xs text-slate-300"
+        >
+          <img
+            class="h-5 w-5"
+            [src]="'../../../../assets/images/icons/' + usedTech.image"
+            alt=""
+            srcset=""
+          />
+          {{ usedTech.name }}
+        </span>
+      }
+    </div>
+    <p class="font-poppins text-base font-light leading-normal text-slate-300">
+      {{ project?.description }}
+    </p>
+  </div>
+  <div class="flex flex-col py-10 px-16"></div>
+</div>
