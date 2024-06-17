@@ -1,0 +1,41 @@
+<section
+  class="flex h-[calc(1000px*3.5)] flex-col overflow-x-hidden bg-custom-bg text-white"
+>
+  <h1
+    class="mb-20 mt-10 h-fit w-full justify-center text-center font-alien-ai text-7xl text-transparent text-stroke-sm text-stroke-white"
+    #skillsTitle
+  >
+    skills
+  </h1>
+  <div class="WRAPPER relative flex h-full w-full overflow-hidden p-2">
+    <div
+      class="CONTAINER ml-[700px] mt-[200px] flex flex-row gap-10 xl:ml-[750px]"
+    >
+      <h1
+        class="fixed -top-40 left-[-400px] text-center text-xl font-bold text-custom-secondary xl:left-[-400px]"
+        #skillsDesc
+      >
+        These are skills I have studied and used since I started learning web
+        development.
+      </h1>
+      @for (skill of skills; track $index) {
+        <div class="SKILL relative flex w-64 flex-col gap-2" #skillContainer>
+          <img
+            class="h-10 w-10 rounded-lg"
+            [src]="'../assets/images/icons/' + skill.image"
+            [alt]="skill.image"
+          />
+          <h1 class="absolute left-12 top-1 text-xl first-letter:uppercase">
+            {{ skill.name }}
+          </h1>
+          <hr />
+          <p class="text-lg text-slate-300 first-letter:uppercase">
+            {{ skill.description }}
+          </p>
+        </div>
+      }
+      <div class="w-64" #skillContainer></div>
+      <div class="w-64" #skillContainer></div>
+    </div>
+  </div>
+</section>
