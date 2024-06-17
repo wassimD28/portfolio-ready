@@ -5,6 +5,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'fhd': '1920px', // 1920x1080
+        'hd-1366': '1366px', // 1366x768
+        'hd-1600': '1600px', // 1600x900
+      },
       textStroke: {
         'sm': '1px',
         'md': '2px',

@@ -44,6 +44,7 @@ export class SecondSectionComponent implements AfterViewInit{
 
   ngAfterViewInit(): void {
     const screenWidth = window.innerWidth;
+    console.log(screenWidth);
 
     this.tl.from('.ProjectTitle', {
       scrollTrigger: {
@@ -53,7 +54,7 @@ export class SecondSectionComponent implements AfterViewInit{
         scrub: 1,
         //markers: true
       },
-      x: screenWidth>1400 ? 1000 : 900,
+      x: screenWidth>1600 ? 1200 : 900,
       duration: 2,
       ease: 'power1.in'
     });
@@ -66,7 +67,7 @@ export class SecondSectionComponent implements AfterViewInit{
         scrub: 1,
         //markers: true
       },
-      x: 1400,
+      x: screenWidth>1600 ? 1900 : 1300,
       skewY: -10,
       skewX : 0,
       scale: 1,
@@ -80,9 +81,9 @@ export class SecondSectionComponent implements AfterViewInit{
         start: '-20% center',
         end: '40% center',
         scrub: 1,
-        markers: true
+        //markers: true
       },
-      x: -1400,
+      x: screenWidth>1600 ? -1900 : -1300,
       skewY: -10,
       skewX : 0,
       scale: 1,
@@ -96,9 +97,9 @@ export class SecondSectionComponent implements AfterViewInit{
         start: '-50% center',
         end: '50% center',
         scrub: 1,
-        markers: false
+        //markers: true
       },
-      x: 1400,
+      x: screenWidth>1600 ? 1900 : 1300,
       skewY: -10,
       skewX : 0,
       scale: 1,

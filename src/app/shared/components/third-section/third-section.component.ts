@@ -31,6 +31,11 @@ export class ThirdSectionComponent implements AfterViewInit{
       description: 'Previously, I used pure php to build my api, but now I changed to Symfony.'
     },
     {
+      name: 'mySQL',
+      image: 'my-sql.png',
+      description: 'I use MySQL as my database management system.'
+    },
+    {
       name: 'tailwind',
       image: 'Tailwind CSS.png',
       description: 'I used to use Bootstrap as a CSS framework, but after I tried Tailwind I no longer use Bootstrap at all.'
@@ -80,7 +85,7 @@ export class ThirdSectionComponent implements AfterViewInit{
         scrub: 1,
         //markers: true
       },
-      x: screenWidth>1400 ? 900 : 800, // example animation
+      x: screenWidth>1600 ? 1200 : 800,
       duration: 2,
       ease: 'power1.in'
     });
@@ -91,7 +96,7 @@ export class ThirdSectionComponent implements AfterViewInit{
         start: '-150% center',
         end: '150% center',
         scrub: 1,
-        markers: true
+        //markers: true
       },
       y: 100, // example animation
       opacity: 0,

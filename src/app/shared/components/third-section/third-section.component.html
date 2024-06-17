@@ -1,5 +1,5 @@
 <section
-  class="flex h-[calc(1000px*3.5)] flex-col overflow-x-hidden bg-custom-bg text-white"
+  class="fhd:h-[calc(1000px*4.1)] flex h-[calc(1000px*3.5)] flex-col overflow-x-hidden bg-custom-bg text-white"
 >
   <h1
     class="mb-20 mt-10 h-fit w-full justify-center text-center font-alien-ai text-7xl text-transparent text-stroke-sm text-stroke-white"
@@ -9,27 +9,29 @@
   </h1>
   <div class="WRAPPER relative flex h-full w-full overflow-hidden p-2">
     <div
-      class="CONTAINER ml-[700px] mt-[200px] flex flex-row gap-10 xl:ml-[750px]"
+      class="CONTAINER fhd:ml-[1000px] ml-[700px] mt-[200px] flex flex-row gap-10"
     >
       <h1
-        class="fixed -top-40 left-[-400px] text-center text-xl font-bold text-custom-secondary xl:left-[-400px]"
+        class="fhd:left-[-600px] fhd:text-3xl fixed -top-40 left-[-400px] text-center text-xl font-bold text-custom-secondary"
         #skillsDesc
       >
         These are skills I have studied and used since I started learning web
         development.
       </h1>
       @for (skill of skills; track $index) {
-        <div class="SKILL relative flex w-64 flex-col gap-2" #skillContainer>
+        <div class="SKILL relative flex w-72 fhd:w-96 flex-col gap-2" #skillContainer>
           <img
-            class="h-10 w-10 rounded-lg"
+            class="fhd:w-12 fhd:h-12 h-10 w-10 rounded-lg"
             [src]="'../assets/images/icons/' + skill.image"
             [alt]="skill.image"
           />
-          <h1 class="absolute left-12 top-1 text-xl first-letter:uppercase">
+          <h1
+            class="fhd:text-2xl absolute left-16 top-1 text-xl first-letter:uppercase"
+          >
             {{ skill.name }}
           </h1>
           <hr />
-          <p class="text-lg text-slate-300 first-letter:uppercase">
+          <p class="fhd:text-xl text-lg text-slate-300 first-letter:uppercase">
             {{ skill.description }}
           </p>
         </div>
