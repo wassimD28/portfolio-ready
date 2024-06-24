@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-fourth-section',
@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   templateUrl: './fourth-section.component.html',
 })
 export class FourthSectionComponent {
-
+  @Input() mm! : gsap.MatchMedia;
 }

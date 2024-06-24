@@ -22,20 +22,23 @@ gsap.registerPlugin(ScrollTrigger);
 })
 export class AppComponent implements AfterViewInit {
   tl = gsap.timeline();
+  mm = gsap.matchMedia();
   ngAfterViewInit(): void {
 
     //! lenis smooth scrolling
-    const lenis = new Lenis()
+    this.mm.add("(min-width: 1024px)",()=>{
+      const lenis = new Lenis()
 
-    lenis.on('scroll', (e: any) => {
-      
-    })
+      lenis.on('scroll', (e: any) => {
+        console.log('outer width :'+window.outerWidth)
+        console.log('inner width :'+window.innerWidth)
+      })
+      function raf(time: any) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+      }
 
-    function raf(time: any) {
-      lenis.raf(time)
       requestAnimationFrame(raf)
-    }
-
-    requestAnimationFrame(raf)
+    });
   }
 }

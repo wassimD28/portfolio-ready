@@ -9,6 +9,8 @@ module.exports = {
         'fhd': '1920px', // 1920x1080
         'hd-1366': '1366px', // 1366x768
         'hd-1600': '1600px', // 1600x900
+        'xs': '360px',
+        'tablet': '1024px',
       },
       textStroke: {
         'sm': '1px',
@@ -60,5 +62,6 @@ module.exports = {
 
       addUtilities(newUtilities, ['responsive', 'hover']);
     },
+    require('tailwind-scrollbar')
   ],
 }

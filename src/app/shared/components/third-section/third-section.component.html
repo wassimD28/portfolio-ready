@@ -1,43 +1,48 @@
 <section
-  class="fhd:h-[calc(1000px*4.1)] flex h-[calc(1000px*3.5)] flex-col overflow-x-hidden bg-custom-bg text-white"
+  class="flex flex-col overflow-x-hidden bg-custom-bg text-white xs:h-fit lg:h-[calc(1000px*3.5)] fhd:h-[calc(1000px*4.1)]"
 >
   <h1
-    class="mb-20 mt-10 h-fit w-full justify-center text-center font-alien-ai text-7xl text-transparent text-stroke-sm text-stroke-white"
+    class="mb-20 mt-10 h-fit w-full justify-center text-center font-alien-ai text-transparent text-stroke-sm text-stroke-white xs:mb-6 xs:text-6xl lg:text-7xl"
     #skillsTitle
   >
     skills
   </h1>
-  <div class="WRAPPER relative flex h-full w-full overflow-hidden p-2">
+  <div
+    class="WRAPPER relative flex h-full w-full overflow-hidden xs:p-4 lg:p-2"
+  >
     <div
-      class="CONTAINER fhd:ml-[1000px] ml-[700px] mt-[200px] flex flex-row gap-10"
+      class="CONTAINER flex gap-10 xs:ml-0 xs:w-full xs:flex-col xs:justify-center lg:ml-[700px] lg:mt-[200px] lg:w-fit lg:flex-row lg:justify-normal fhd:ml-[1000px]"
     >
       <h1
-        class="fhd:left-[-600px] fhd:text-3xl fixed -top-40 left-[-400px] text-center text-xl font-bold text-custom-secondary"
+        class="fixed -top-40 left-[-400px] text-center text-xl font-bold text-custom-secondary fhd:left-[-600px] fhd:text-3xl"
         #skillsDesc
       >
         These are skills I have studied and used since I started learning web
         development.
       </h1>
       @for (skill of skills; track $index) {
-        <div class="SKILL relative flex w-72 fhd:w-96 flex-col gap-2" #skillContainer>
+        <div
+          class="SKILL relative flex w-72 flex-col gap-2 xs:w-full lg:w-72 fhd:w-96"
+          #skillContainer
+        >
           <img
-            class="fhd:w-12 fhd:h-12 h-10 w-10 rounded-lg"
+            class="h-10 w-10 rounded-lg fhd:h-12 fhd:w-12"
             [src]="'../assets/images/icons/' + skill.image"
             [alt]="skill.image"
           />
           <h1
-            class="fhd:text-2xl absolute left-16 top-1 text-xl first-letter:uppercase"
+            class="absolute top-1 text-xl first-letter:uppercase xs:left-12 lg:left-16 fhd:text-2xl"
           >
             {{ skill.name }}
           </h1>
           <hr />
-          <p class="fhd:text-xl text-lg text-slate-300 first-letter:uppercase">
+          <p class="text-lg text-slate-300 first-letter:uppercase fhd:text-xl">
             {{ skill.description }}
           </p>
         </div>
       }
       <div class="w-64" #skillContainer></div>
-      <div class="w-64" #skillContainer></div>
+      <div class="w-64 lg:block xs:hidden" #skillContainer></div>
     </div>
   </div>
 </section>

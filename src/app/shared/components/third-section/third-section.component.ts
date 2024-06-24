@@ -13,6 +13,7 @@ gsap.registerPlugin(ScrollTrigger);
 })
 export class ThirdSectionComponent implements AfterViewInit{
   @Input() tl!: GSAPTimeline;
+  @Input() mm! : gsap.MatchMedia;
 
   skills : Skill[] = [
     {
@@ -64,61 +65,63 @@ export class ThirdSectionComponent implements AfterViewInit{
 
     const screenWidth = window.innerWidth;
 
-    let scrollTween = gsap.to(content, {
-      xPercent: -100 * (content.length - 1),
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '.CONTAINER',
-        pin: true,
-        scrub: 1,
-        start: 'top center',
-        end: () => `+=${container.offsetWidth}`,
-        //markers: true,
-      }
-    });
-
-    this.tl.from(this.skillsTitle.nativeElement, {
-      scrollTrigger: {
-        trigger: this.skillsTitle.nativeElement,
-        start: 'top center',
-        end: 'bottom center',
-        scrub: 1,
-        //markers: true
-      },
-      x: screenWidth>1600 ? 1200 : 800,
-      duration: 2,
-      ease: 'power1.in'
-    });
-
-    this.tl.from(this.skillsDesc.nativeElement, {
-      scrollTrigger: {
-        trigger: this.skillsDesc.nativeElement,
-        start: '-150% center',
-        end: '150% center',
-        scrub: 1,
-        //markers: true
-      },
-      y: 100, // example animation
-      opacity: 0,
-      duration: 1,
-      ease: 'ease',
-    });
-
-    content.forEach(element => {
-      gsap.from(element, {
-        opacity: 0,
-        duration: 1,
-        y: 150,
-        stagger: 0.1,
-        ease: 'ease',
+    this.mm.add("(min-width: 1024px)",()=>{
+      let scrollTween = gsap.to(content, {
+        xPercent: -100 * (content.length - 1),
+        ease: 'none',
         scrollTrigger: {
-          trigger: element,
-          containerAnimation: scrollTween,
-          start: 'left center',
-          end: '90% center',
+          trigger: '.CONTAINER',
+          pin: true,
           scrub: 1,
+          start: 'top center',
+          end: () => `+=${container.offsetWidth}`,
           //markers: true,
         }
+      });
+
+      this.tl.from(this.skillsTitle.nativeElement, {
+        scrollTrigger: {
+          trigger: this.skillsTitle.nativeElement,
+          start: 'top center',
+          end: 'bottom center',
+          scrub: 1,
+          //markers: true
+        },
+        x: screenWidth>1600 ? 1200 : 800,
+        duration: 2,
+        ease: 'power1.in'
+      });
+
+      this.tl.from(this.skillsDesc.nativeElement, {
+        scrollTrigger: {
+          trigger: this.skillsDesc.nativeElement,
+          start: '-150% center',
+          end: '150% center',
+          scrub: 1,
+          //markers: true
+        },
+        y: 100, // example animation
+        opacity: 0,
+        duration: 1,
+        ease: 'ease',
+      });
+
+      content.forEach(element => {
+        gsap.from(element, {
+          opacity: 0,
+          duration: 1,
+          y: 150,
+          stagger: 0.1,
+          ease: 'ease',
+          scrollTrigger: {
+            trigger: element,
+            containerAnimation: scrollTween,
+            start: 'left center',
+            end: '90% center',
+            scrub: 1,
+            //markers: true,
+          }
+        });
       });
     });
   }

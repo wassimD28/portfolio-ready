@@ -1,27 +1,31 @@
-<section class="relative flex h-svh bg-custom-bg items-center justify-center text-white">
+<section
+  class="relative flex h-svh items-center justify-center bg-custom-bg text-white"
+>
   <!--blur circle-->
   <div
-    class="absolute -left-40 -top-48 h-96 w-96 rounded-full bg-custom-primary opacity-10 blur-3xl fhd:w-[500px] fhd:h-[500px] fhd:blur-[100px]"
+    class="absolute -left-40 -top-48 h-96 w-96 rounded-full bg-custom-primary opacity-10 blur-3xl fhd:h-[500px] fhd:w-[500px] fhd:blur-[100px]"
   ></div>
   <!--container-->
-  <div class="relative h-[550px] w-[1240px] fhd:scale-150">
+  <div
+    class="relative xs:h-[550px] xs:w-[350px] lg:h-[550px] lg:w-[1240px] fhd:scale-150"
+  >
     <!--dialog box desc-->
     <h1
-      class="font-base absolute left-[210px] top-[140px] z-0 w-[520px] skew-x-6 bg-custom-blueBg1 px-10 py-6 font-poppins text-lg text-white first-letter:uppercase"
+      class="font-base absolute z-0 skew-x-6 bg-custom-blueBg1 font-poppins text-white first-letter:uppercase lg:left-[210px] lg:top-[140px] lg:w-[520px] lg:px-10 lg:py-6 lg:text-lg xs:top-14 xs:w-80 xs:text-sm xs:py-2 xs:px-4 xs:left-6"
     >
       Feel free to reach out for collaborations, job opportunities, or just to
       say hi!
     </h1>
     <!--dialog box text-->
     <h1
-      class="absolute left-[210px] top-16 z-10 skew-x-6 bg-custom-blueBg px-16 py-6 font-poppins text-4xl font-bold uppercase text-white"
+      class="absolute z-10 skew-x-6 bg-custom-blueBg font-poppins font-bold uppercase text-white xs:left-3 xs:top-4 xs:px-6 xs:py-2 xs:text-2xl lg:left-[210px] lg:top-16 lg:px-16 lg:py-6 lg:text-4xl"
     >
       let's work together !
     </h1>
     <!--dialog box tail image-->
     <img
       id="dialog"
-      class="absolute right-[440px] top-32 w-[70px] duration-150 ease-in-out"
+      class="absolute right-[440px] top-32 w-[70px] duration-150 ease-in-out xs:hidden lg:block"
       src="../assets/images/dialog box tail.svg"
       alt=""
       srcset=""
@@ -29,8 +33,16 @@
     <!--character image-->
     <img
       id=""
-      class="absolute right-6 top-10 h-[480px] duration-150 ease-in-out"
+      class="absolute right-6 top-10 h-[480px] duration-150 ease-in-out xs:hidden lg:block"
       src="../assets/images/portfolio-character---call-me3.gif"
+      alt=""
+      srcset=""
+    />
+    <!--character image on mobile-->
+    <img
+      id=""
+      class="absolute bottom-16 right-2 h-[350px] duration-150 ease-in-out xs:block lg:hidden"
+      src="../../../../assets/images/portfolio-character---call-me.png"
       alt=""
       srcset=""
     />
@@ -38,7 +50,7 @@
     <a
       id=""
       href="mailto:wassim28saad@gmail.com?subject=Contact%20from%20Portfolio&body="
-      class="font-base absolute bottom-6 right-32 flex -skew-y-3 flex-row items-center gap-4 bg-custom-secondary px-32 py-2 text-xl uppercase text-custom-bg duration-150 ease-in-out hover:-skew-y-2 hover:bg-custom-primary"
+      class="lg:font-base absolute flex -skew-y-3 flex-row items-center gap-4 bg-custom-secondary py-2 uppercase text-custom-bg duration-150 ease-in-out hover:-skew-y-2 hover:bg-custom-primary xs:bottom-5 xs:right-10 xs:px-16 lg:bottom-6 lg:right-32 lg:px-32 lg:text-xl"
     >
       <i class="fa-solid fa-envelope text-2xl"></i>
       Contact me

@@ -2,18 +2,18 @@
   [id]="'project-'+index"
   [class]="
     'flex ' +
-    (reverse ? 'flex-row-reverse' : 'flex-row') +
-    ' mb-32 gap-10'
+    (reverse ? 'lg:flex-row-reverse' : 'lg:flex-row') +
+    ' lg:mb-32 lg:gap-10 xs:flex-col xs:mb-6 xs:rounded-md xs:gap-2 lg:p-0 lg:bg-transparent xs:bg-custom-blueBg xs:py-3 xs:px-4'
   "
 >
   <img
-    class="h-[230px] w-[450px] rounded-md fhd:w-[550px] fhd:h-[300px]"
+    class="lg:h-[230px] lg:w-[450px] rounded-md fhd:w-[550px] fhd:h-[300px] xs:w-full xs:h-fit"
     [src]="'../../../../assets/images/' + project?.image"
     alt=""
   />
   <div class="flex flex-col">
     <h1
-      class="mb-2 font-poppins text-4xl font-bold uppercase leading-tight text-white fhd:text-5xl"
+      class="mb-2 font-poppins lg:text-4xl font-bold uppercase leading-tight text-white fhd:text-5xl xs:text-3xl"
     >
       {{ project?.title }}
     </h1>
@@ -32,7 +32,7 @@
         </span>
       }
     </div>
-    <p class="font-poppins text-base font-light leading-normal text-slate-300 fhd:text-2xl">
+    <p class="font-poppins lg:text-base font-light leading-normal text-slate-300 fhd:text-2xl xs:text-sm">
       {{ project?.description }}
     </p>
   </div>
