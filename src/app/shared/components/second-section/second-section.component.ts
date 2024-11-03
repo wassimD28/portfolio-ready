@@ -14,20 +14,26 @@ export class SecondSectionComponent implements AfterViewInit{
   projects : Project []= [
     {
       title : 'Training website',
-      description:'At the ending of 2023, I developed a training website web app using Angular for the front end and pure PHP for the backend. This project aimed to provide an interactive platform for users to access various training modules and track their progress. The Angular framework allowed me to create a dynamic and responsive user interface, while the PHP backend handled user authentication, data storage, and retrieval. Through this project, I gained valuable experience in full-stack development, particularly in integrating a modern front-end framework with a traditional server-side language.',
+      description:'In May 2024, I developed a training web app using Angular for a dynamic front end and Express.js for the backend. The app allowed users to access training modules and track their progress, helping me gain experience in full-stack development and modern front-end integration with server-side logic.',
       image: 'training-app.jpeg',
       usedTechnology : [
         {name: 'angular', image: 'angular.png'},
-        {name: 'php', image: 'php.png'},
-      ]
+        {name: 'express.js', image: 'expressJs.png'},
+        {name: 'tailwind', image: 'Tailwind CSS.png'},
+        {name: 'mySQL', image: 'my-sql.png'},
+      ],
+      fontGitHubLink: 'https://github.com/wassimD28/FireFist-fixed-version',
+      backGitHubLink: 'https://github.com/wassimD28/FireFist-Back-End'
     },{
       title : 'Film library',
-      description:"At the end of May 2024, I completed a film library website project using Symfony for both the backend and frontend. This project aimed to provide users with a comprehensive database of films, including details such as synopses, cast, and crew information. This project not only strengthened my skills in full-stack development but also deepened my understanding of the Symfony framework's capabilities in creating cohesive and scalable web applications.",
+      description:"At the end of 2023, I completed a film library website using Symfony for both backend and frontend. The project provided users with a comprehensive film database, including details like synopses, cast, and crew information. It strengthened his skills in full-stack development and showcased Symfony's capabilities for building cohesive, scalable web applications.",
       image: 'film-library-app.jpeg',
       usedTechnology : [
         {name: 'symfony', image: 'symfony-white.png'},
         {name: 'tailwind', image: 'Tailwind CSS.png'},
-      ]
+        {name: 'mySQL', image: 'my-sql.png'},
+      ],
+      fullGitHubLink: 'https://github.com/wassimD28/Film-library'
     },
     {
       title: 'Pomodoro timer',

@@ -27,30 +27,26 @@ export class ThirdSectionComponent implements AfterViewInit{
       description: 'I use Angular as my front-end framework because it provides a robust structure for building dynamic web applications.'
     },
     {
+      name : 'express.js',
+      image: 'expressJs.png',
+      description: 'I use Express.js for my backend because it provides a simple and flexible way to build APIs.'
+    },
+    {
       name: 'symfony',
       image: 'symfony-white.png',
-      description: 'Previously, I used pure php to build my api, but now I changed to Symfony.'
+      description: 'I started with Symfony but I shifted to Angular and Express.js for more dynamic, full-stack development.'
+    },
+    {
+      name: 'tailwind',
+      image: 'Tailwind CSS.png',
+      description: 'I use Tailwind CSS for quick, responsive styling directly in my markup.'
     },
     {
       name: 'mySQL',
       image: 'my-sql.png',
       description: 'I use MySQL as my database management system.'
     },
-    {
-      name: 'tailwind',
-      image: 'Tailwind CSS.png',
-      description: 'I used to use Bootstrap as a CSS framework, but after I tried Tailwind I no longer use Bootstrap at all.'
-    },
-    {
-      name: 'java',
-      image: 'java.png',
-      description: 'I used Java to build computer applications using the Swing library.'
-    },
-    {
-      name: 'python',
-      image: 'python.png',
-      description: 'I used Python to create an application that downloads videos from YouTube'
-    },
+
   ];
 
   @ViewChildren('skillContainer') skillContainers!: QueryList<ElementRef>;

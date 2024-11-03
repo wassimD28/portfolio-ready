@@ -23,6 +23,7 @@
     "font-awesome": "^4.7.0",
     "gsap": "^3.12.5",
     "lenis": "^1.1.2",
+    "project-test": "file:",
     "rxjs": "~7.8.0",
     "split-type": "^0.3.4",
     "tslib": "^2.3.0",

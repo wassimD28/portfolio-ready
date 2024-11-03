@@ -5,4 +5,7 @@ export interface Project{
   description: string;
   image: string;
   usedTechnology : UsedTechnology[];
+  fontGitHubLink?: string;
+  backGitHubLink?: string;
+  fullGitHubLink?: string;
 }
