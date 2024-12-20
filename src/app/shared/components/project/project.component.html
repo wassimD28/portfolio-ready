@@ -6,29 +6,28 @@
     ' xs:mb-6 xs:flex-col xs:gap-2 xs:rounded-md xs:bg-custom-blueBg xs:px-4 xs:py-3 lg:mb-32 lg:gap-10 lg:bg-transparent lg:p-0'
   "
 >
-  <img
-    class="rounded-md xs:h-fit xs:w-full lg:h-[230px] lg:w-[450px] fhd:h-[300px] fhd:w-[550px]"
-    [src]="'../../../../assets/images/' + project?.image"
-    alt=""
-  />
+  <!-- carousel -->
+
+  <app-carousel [Images]="project?.images"></app-carousel>
+
   <div class="flex flex-col">
     <h1
       class="mb-2 font-poppins font-bold uppercase leading-tight text-white xs:text-3xl lg:text-4xl fhd:text-5xl"
     >
       {{ project?.title }}
     </h1>
-    <div class="mb-2 flex flex-row gap-2 flex-wrap">
+    <div class="mb-2 flex flex-row flex-wrap gap-2">
       @for (usedTech of project?.usedTechnology; track $index) {
         <span
-          class="flex flex-row items-center lg:gap-2 xs:gap-1 w-fit rounded-full bg-custom-blueBg1 lg:px-3 lg:py-2 font-poppins text-xs text-slate-300 fhd:gap-3 fhd:text-xl xs:px-3 xs:py-2"
+          class="flex w-fit flex-row items-center rounded-full bg-custom-blueBg1 font-poppins text-xs text-slate-300 xs:gap-1 xs:px-3 xs:py-2 first-letter:uppercase lg:gap-2 lg:px-3 lg:py-2 fhd:gap-3 fhd:text-xl"
         >
           <img
-            class="lg:h-5 lg:w-5 fhd:h-8 fhd:w-8 xs:h-4 xs:w-4"
+            class="xs:h-4 xs:w-4 lg:h-5 lg:w-5 fhd:h-8 fhd:w-8"
             [src]="'../../../../assets/images/icons/' + usedTech.image"
             alt=""
             srcset=""
           />
-          {{ usedTech.name }}
+          <p class="first-letter:uppercase">{{ usedTech.name }}</p>
         </span>
       }
     </div>
@@ -38,10 +37,10 @@
       {{ project?.description }}
     </p>
     <!-- GitHub links -->
-    <div class="flex flex-row lg:gap-3 xs:gap-2 mt-4">
+    <div class="mt-4 flex flex-row xs:gap-2 lg:gap-3">
       @if (project?.fullGitHubLink) {
         <a
-          class="flex w-fit items-center gap-2 rounded border px-4 py-2 font-poppins xs:text-xs lg:text-sm text-white hover:bg-white/90 hover:text-custom-blueBg1 duration-200 ease-in-out"
+          class="flex w-fit items-center gap-2 rounded border px-4 py-2 font-poppins text-white duration-200 ease-in-out hover:bg-white/90 hover:text-custom-blueBg1 xs:text-xs lg:text-sm"
           href="{{ project?.fullGitHubLink }}"
           target="_blank"
         >
@@ -51,7 +50,7 @@
       }
       @if (project?.fontGitHubLink) {
         <a
-          class="flex w-fit items-center gap-2 rounded border px-4 py-2 font-poppins text-sm text-white hover:bg-white/90 hover:text-custom-blueBg1 duration-200 ease-in-out"
+          class="flex w-fit items-center gap-2 rounded border px-4 py-2 font-poppins text-sm text-white duration-200 ease-in-out hover:bg-white/90 hover:text-custom-blueBg1"
           href="{{ project?.fontGitHubLink }}"
           target="_blank"
         >
@@ -61,7 +60,7 @@
       }
       @if (project?.backGitHubLink) {
         <a
-          class="flex w-fit items-center gap-2 rounded border px-4 py-2 font-poppins text-sm text-white hover:bg-white/90 hover:text-custom-blueBg1 duration-200 ease-in-out"
+          class="flex w-fit items-center gap-2 rounded border px-4 py-2 font-poppins text-sm text-white duration-200 ease-in-out hover:bg-white/90 hover:text-custom-blueBg1"
           href="{{ project?.backGitHubLink }}"
           target="_blank"
         >

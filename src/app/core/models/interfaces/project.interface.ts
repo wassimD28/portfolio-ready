@@ -3,7 +3,7 @@ import { UsedTechnology } from "./usedTechnology.interface";
 export interface Project{
   title: string;
   description: string;
-  image: string;
+  images: string[];
   usedTechnology : UsedTechnology[];
   fontGitHubLink?: string;
   backGitHubLink?: string;
